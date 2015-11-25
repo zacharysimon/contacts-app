@@ -1,0 +1,16 @@
+<div class = "container">
+  
+  <h1> First Name: <%= @person.first_name %> </h1>
+  <h1> Last Name: <%= @person.last_name %> </h1>
+  <h1> Phone Number: <%= @person.phone_number %> </h1>
+  <h1> Email: <%= @person.email %> </h1>
+  <h4>Last Updated: <%= @person.readable_created_at %></h4>
+  
+  <div>
+    <a href="/contacts/<%= @person.id %>/edit">Edit this contact</a>
+  </div>
+  <div>
+     <%= link_to "Delete this contact", "/contacts/#{@person.id}", method: :delete %>
+  </div>
+</div>
+

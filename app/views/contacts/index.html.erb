@@ -1,0 +1,19 @@
+<div class = "container">
+
+  <% if current_user %>
+  <h1 class = "title"><%= current_user.email %>'s contacts</h1>
+  <% end %>
+
+  <div class = "row">
+    <% @people.each do |name| %>
+      <div class = "col-md-3">
+        <div class = "well">
+            <h3>Name: <a href = "/contacts/<%= name.id %>" ><%= name.full_name %> </a></h3>
+          <p>Phone number: <%= name.phone_number %></p>
+          <p>email: <%= name.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

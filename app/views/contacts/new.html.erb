@@ -1,0 +1,27 @@
+<div class = "container">
+  <h1>Add a new contact to the ole' contact book!</h1>
+  <%= form_tag '/contacts', method: :post do %>
+    <div>
+      <div class = "form-group">
+        <%= label_tag :input_first_name %>
+        <%= text_field_tag :input_first_name %>
+      </div>
+      <div class = "form-group">
+        <%= label_tag :input_last_name %>
+        <%= text_field_tag :input_last_name %>
+      </div>
+      <div class = "form-group">
+        <%= label_tag :input_phone_number %>
+        <%= text_field_tag :input_phone_number %>
+      </div>
+      <div class = "form-group">
+        <%= label_tag :input_email %>
+        <%= text_field_tag :input_email %>
+      </div>
+      <div>
+        <%= submit_tag 'Send' %>
+      </div>
+    </div>
+
+  <% end %>
+</div>
